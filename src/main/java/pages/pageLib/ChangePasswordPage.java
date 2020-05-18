@@ -10,10 +10,20 @@ public class ChangePasswordPage extends BasePage {
     addElement("newPasswordField", "input#newPassword");
     addElement("repeatNewPasswordField", "input#newPasswordRepeat");
     addElement("change", "button#changeButton");
-  
+    addElement("accountButton", "button[aria-label*='Show/hide account menu']");
+    addElement("logoutButton", "button[aria-label='Logout']");
   }
   @Override
   public SelenideElement getMainElement() {
     return getElement("title");
+  }
+
+  @Override
+  public void navigate(String element){
+    switch(element){
+      case "logoutButton":
+        PageManager.setCurrentPage(PageManager.getHomePage());
+        break;
+    }
   }
 }
