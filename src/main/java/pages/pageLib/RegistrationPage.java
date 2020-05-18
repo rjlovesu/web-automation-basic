@@ -11,6 +11,8 @@ public class RegistrationPage extends BasePage {
     addElement("securityQuestion", "mat-select[aria-label='Selection list for the security question']");
     addElement("securityAnswer", "input[aria-label='Field for the answer to the security question']");
     addElement("registrationButton", "button[aria-label='Button to complete the registration']");
+    
+  
   }
   // Methods
   @Override

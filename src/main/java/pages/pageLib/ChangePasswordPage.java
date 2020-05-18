@@ -1,6 +1,7 @@
 package pages.pageLib;
 
 import com.codeborne.selenide.SelenideElement;
+import pages.PageManager;
 
 public class ChangePasswordPage extends BasePage {
   //Constructor
@@ -11,7 +12,7 @@ public class ChangePasswordPage extends BasePage {
     addElement("repeatNewPasswordField", "input#newPasswordRepeat");
     addElement("change", "button#changeButton");
     addElement("accountButton", "button[aria-label*='Show/hide account menu']");
-    addElement("logoutButton", "button[aria-label='Logout']");
+    addElement("logout", "button[aria-label='Logout']");
   }
   @Override
   public SelenideElement getMainElement() {
@@ -21,7 +22,7 @@ public class ChangePasswordPage extends BasePage {
   @Override
   public void navigate(String element){
     switch(element){
-      case "logoutButton":
+      case "logout":
         PageManager.setCurrentPage(PageManager.getHomePage());
         break;
     }
