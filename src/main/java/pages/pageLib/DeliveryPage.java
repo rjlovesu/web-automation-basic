@@ -20,6 +20,7 @@ public class DeliveryPage extends SelectAddressPage {
   public void navigate(String element) {
     switch (element){
       case "continue": PageManager.setCurrentPage(PageManager.getPaymentOptionsPage()); break;
+      default        : super.navigate(element); break;
     }
   }
 }

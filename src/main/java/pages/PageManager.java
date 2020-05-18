@@ -16,6 +16,7 @@ public class PageManager {
   private static PaymentOptionsPage paymentOptionsPage = new PaymentOptionsPage();
   private static OrderSummaryPage orderSummaryPage = new OrderSummaryPage();
   private static ChangePasswordPage changePasswordPage = new ChangePasswordPage();
+  private static AddAddressPage addAddressPage = new AddAddressPage();
   // Methods
   public static void setCurrentPage(BasePage page){
     currentPage = page;
@@ -57,5 +58,8 @@ public class PageManager {
   }
   public static ChangePasswordPage getChangePasswordPage(){
     return changePasswordPage;
+  }
+  public static AddAddressPage getAddAddressPage(){
+    return addAddressPage;
   }
 }

@@ -19,8 +19,9 @@ public class SelectAddressPage extends BasePage {
   @Override
   public void navigate(String element) {
     switch (element){
-      case "continue": PageManager.setCurrentPage(PageManager.getDeliveryPage()); break;
-      default        : super.navigate(element);
+      case "continue" : PageManager.setCurrentPage(PageManager.getDeliveryPage()); break;
+      case "addAdress": PageManager.setCurrentPage(PageManager.getAddAdressPage()); break;
+      default         : super.navigate(element);
     }
   }
 }
