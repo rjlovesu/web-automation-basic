@@ -50,6 +50,7 @@ public class BasePage {
     elementCollection.put(key, path);
   }
   public SelenideElement getElement(String element){
+    
     info("Getting: " + element);
     String path = elementCollection.get(element);
     if(path == null){

@@ -111,7 +111,7 @@ Feature: Basic Actions
     And  I click "Add address"
     And  I set "Country" to "Latvia"
     And  I set "Name" to "Freeman"
-    And  I set "Mobile Number" to "+37120202020"
+    And  I set "Mobile Number" to "20202020"
     And  I set "ZIP code" to "LV-3201"
     And  I set "Address" to "Random Address 25-395"
     And  I set "City" to "Ventspils"
