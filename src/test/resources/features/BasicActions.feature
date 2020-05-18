@@ -75,7 +75,7 @@ Feature: Basic Actions
     | Deutsch  | Bestellungen & Zahlung | Datenschutz & Sicherheit | Abmelden    |
     |  Česky   | Objednávky & Platby    | Soukromí & Bezpečnost    | Odhlásit se |
 
-  @HOME_WORK @IMPLEMENT_THIS
+  @WIP+ @HOME_WORK
   Scenario: Change password
     When I click "Account button"
     And  I click "Login button"
@@ -98,7 +98,7 @@ Feature: Basic Actions
       | Email    | demo            |
       | Password | easyPassword123 |
 
-  @HOME_WORK @IMPLEMENT_THIS
+  @WIP @HOME_WORK @IMPLEMENT_THIS
   Scenario: Add new address
     When I click "Account button"
     And  I click "Login button"
