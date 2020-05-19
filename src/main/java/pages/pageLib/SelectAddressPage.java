@@ -2,6 +2,10 @@ package pages.pageLib;
 
 import com.codeborne.selenide.SelenideElement;
 import pages.PageManager;
+import java.util.Map;
+import io.cucumber.datatable.DataTable;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class SelectAddressPage extends BasePage {
   // Constructor
@@ -34,20 +38,19 @@ public class SelectAddressPage extends BasePage {
 
   public void validateAddress(DataTable dataTable){
     Map<String,String> data = dataTable.transpose().asMaps().get(0);
-    info("Validating Account menu: " + data);
+    info("Validating Select Address menu with " + data);
     
 
     if(data.get("Name") != null){
-      addElement("nameText", "button[aria-label='Add a new address']");
-      assertThat(getElement("nameText").text().contains(data.get("Name"))).isTrue();
+      assertThat(isTextVisible(data.get("Name"))).isTrue();
     }
 
     if(data.get("Address") != null){
-      assertThat(getElement("privacySecurityButton").text().contains(data.get("Address"))).isTrue();
+      assertThat(isTextVisible(data.get("Address"))).isTrue();
     }
 
     if(data.get("Country") != null){
-      assertThat(getElement("logoutButton").text().contains(data.get("Country"))).isTrue();
+      assertThat(isTextVisible(data.get("Country"))).isTrue();
     }
   }
 }

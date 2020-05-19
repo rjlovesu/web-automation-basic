@@ -98,7 +98,7 @@ Feature: Basic Actions
       | Email    | demo            |
       | Password | easyPassword123 |
 
-  @WIP+ @HOME_WORK
+  @WIP @HOME_WORK
   Scenario: Add new address
     When I click "Account button"
     And  I click "Login button"
